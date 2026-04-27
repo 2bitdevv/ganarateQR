@@ -1,6 +1,7 @@
 /**
  * Canonical site URL for SEO (metadataBase, sitemap, robots, JSON-LD).
- * Set NEXT_PUBLIC_SITE_URL in production, e.g. https://yourdomain.com
+ * Priority: NEXT_PUBLIC_SITE_URL → VERCEL_URL → localhost.
+ * Production default: https://ganarate-qr.vercel.app (see `.env.production`).
  */
 export function getSiteUrl(): string {
   if (process.env.NEXT_PUBLIC_SITE_URL) {

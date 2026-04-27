@@ -67,8 +67,8 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: [{ url: "/logo.jpg", type: "image/jpeg" }],
-    apple: "/logo.jpg",
+    icon: [{ url: "/logo.png", type: "image/png" }],
+    apple: "/logo.png",
   },
   formatDetection: {
     telephone: false,

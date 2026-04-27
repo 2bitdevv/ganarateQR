@@ -4,6 +4,8 @@ Modern, client-side QR code generator built with **Next.js (App Router)**, **Typ
 
 Thai-first UI with light/dark themes, glassmorphism styling, and smooth motion (Framer Motion).
 
+**Live site:** [ganarate-qr.vercel.app](https://ganarate-qr.vercel.app/)
+
 ## Features
 
 - **QR types:** Text, URL, Email (with subject/body), Phone (`tel:`), SMS, WhatsApp, Wi‑Fi (`WIFI:`), Contact (vCard)
@@ -51,7 +53,7 @@ Open [http://localhost:3000](http://localhost:3000).
 
 | Variable                 | Required | Description |
 | ------------------------ | -------- | ----------- |
-| `NEXT_PUBLIC_SITE_URL`   | No       | Canonical site URL for SEO (`metadataBase`, Open Graph, sitemap, robots). Example: `https://yourdomain.com`. On Vercel, `VERCEL_URL` is used as a fallback when this is unset. |
+| `NEXT_PUBLIC_SITE_URL`   | No       | Canonical site URL for SEO (`metadataBase`, Open Graph, sitemap, robots, JSON-LD). **Production** is set in [`.env.production`](./.env.production) to `https://ganarate-qr.vercel.app`. Override in Vercel **Environment Variables** if you use a custom domain. When unset locally, `VERCEL_URL` is used on Vercel; otherwise defaults to `http://localhost:3000`. |
 
 ## Project structure
 
