@@ -46,14 +46,14 @@ export const metadata: Metadata = {
     title: "QR Code Generator — สร้าง QR ฟรี บนเว็บ",
     description:
       "สร้าง QR Code แบบ Modern — URL, Email, WiFi, vCard, WhatsApp ดาวน์โหลด PNG ใช้งานได้ทันที",
-    images: [{ url: "/logo.jpg", alt: "QR Code Generator" }],
+    // Social preview: `app/opengraph-image.tsx` (1200×630). Do not set og:image to /logo.jpg — it 404s.
   },
   twitter: {
     card: "summary_large_image",
     title: "QR Code Generator — สร้าง QR ฟรี บนเว็บ",
     description:
       "สร้าง QR Code — URL, Email, WiFi, vCard, WhatsApp ดาวน์โหลด PNG ใช้งานบนเบราว์เซอร์",
-    images: ["/logo.jpg"],
+    // Preview: `app/twitter-image.tsx` (same 1200×630 as OG).
   },
   robots: {
     index: true,

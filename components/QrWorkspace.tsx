@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useState } from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { Coffee, History, Trash2 } from "lucide-react";
 import { TypeSelector } from "@/components/TypeSelector";
@@ -90,19 +91,29 @@ export function QrWorkspace() {
 
   return (
     <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col gap-10 px-4 pb-20 pt-8 md:px-6 md:pt-12">
-      <header className="flex flex-wrap items-center justify-between gap-4">
-        <div>
-          <p className="text-sm font-semibold uppercase tracking-widest text-[#FF5D39]">
-            Modern QR
-          </p>
-          <h1 className="mt-1 text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white md:text-4xl">
-            QR Code Generator
-          </h1>
-          <p className="mt-2 max-w-xl text-sm text-slate-600 dark:text-slate-300 md:text-base">
-            สร้าง QR Code แบบ Modern ด้วยเทคโนโลยีล่าสุด
-          </p>
+      <header className="flex flex-wrap items-start justify-between gap-4">
+        <div className="flex min-w-0 flex-1 items-start gap-3 sm:gap-4">
+          <Image
+            src="/logo.png"
+            alt="QR Code Generator logo"
+            width={72}
+            height={72}
+            priority
+            className="h-14 w-14 shrink-0 rounded-2xl bg-white/90 object-contain p-1 shadow-md ring-1 ring-slate-200/80 dark:bg-slate-900/80 dark:ring-white/10 sm:h-16 sm:w-16"
+          />
+          <div className="min-w-0">
+            <p className="text-sm font-semibold uppercase tracking-widest text-[#FF5D39]">
+              Modern QR
+            </p>
+            <h1 className="mt-1 text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white md:text-4xl">
+              QR Code Generator
+            </h1>
+            <p className="mt-2 max-w-xl text-sm text-slate-600 dark:text-slate-300 md:text-base">
+              สร้าง QR Code แบบ Modern ด้วยเทคโนโลยีล่าสุด
+            </p>
+          </div>
         </div>
-        <div className="flex shrink-0 items-center gap-2">
+        <div className="flex shrink-0 items-center gap-2 self-center sm:self-start">
           <a
             href="https://www.buymeacoffee.com/dev2bit"
             target="_blank"
